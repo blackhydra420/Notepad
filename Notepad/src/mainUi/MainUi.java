@@ -2,6 +2,7 @@ package mainUi;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -46,7 +47,7 @@ public class MainUi implements ActionListener{
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
-	//menu bar
+		//menu bar
 		public void createMenuBar() {
 			menuBar = new JMenuBar();
 			window.setJMenuBar(menuBar);
@@ -60,21 +61,24 @@ public class MainUi implements ActionListener{
 		public void addFileMenu() {
 			fNew = new JMenuItem("New");
 			menuFile.add(fNew);
-			menuFile.addActionListener(this);
-			menuFile.setActionCommand("New");
+			fNew.addActionListener(this);
 			
 			
 			fOpen = new JMenuItem("Open");
 			menuFile.add(fOpen);
+			fOpen.addActionListener(this);
 			
 			fSave = new JMenuItem("Save");
 			menuFile.add(fSave);
+			fSave.addActionListener(this);
 			
 			fSaveAs = new JMenuItem("SaveAs");
 			menuFile.add(fSaveAs);
+			fSaveAs.addActionListener(this);
 			
 			fExit = new JMenuItem("Exit");
 			menuFile.add(fExit);
+			fExit.addActionListener(this);
 		}
 	
 	//textArea
@@ -94,6 +98,10 @@ public class MainUi implements ActionListener{
 		System.out.print(command);
 		switch (command) {
 			case "New": file.newFile();  break;
+			case "Open": file.openFile(); break;
+			case "Save": file.saveFile(); break;
+			case "SaveAs": file.saveAsFile(); break;
+			case "Exit": window.dispose(); break;
 		}
 	}
 }
