@@ -1,6 +1,8 @@
 # Simple Notepad ripoff
 This is a very basic desktop application written in java for learning purpose. It has very basic functionality like opening file, saving file, making new file etc.
+ 
  ----
+
 ## Functions:
 - New: It will create a new blank file.
 - Open: This can be used to open exited text file inside computer.
