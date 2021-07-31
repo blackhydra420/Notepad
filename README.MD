@@ -15,3 +15,6 @@ Java need to be installed in a computer to run this program.
 
 ## Programming language used:
 Java
+
+## Contributors
+- [codershrutik](https://github.com/codershrutik) > Added his own version of notepad (Simple Notepad).
